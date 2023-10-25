@@ -24,10 +24,12 @@ code {
   gap: 20px;
   padding: 0;
   margin-right: 0 0 0 50px;
+  font-weight: bold;
 }
 
 .logo {
   cursor: pointer;
   display: block; 
   margin-right: 20px; 
+  width: 59px;
 }
