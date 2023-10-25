@@ -4,29 +4,46 @@ import logo from './logo192.png';
 
 function Header(){
   return (
-    <div style={{ display: "flex", alignItems: "center" }}>
-      <img src={logo} alt="React Logo" width="92" height="92" />
-      <h1 style={{ marginLeft: "20px" }}>Fun facts about React</h1>
-    </div>
-  )
-}
-function MainContent(){
-  return (
-    <ul style={{ textAlign: "left" }}>
-      <li>Was first released in 2013</li>
-      <li>Was originally created by JORDAN WALKE</li>
-      <li>Has well over 100k stars on Github</li>
-      <li>is maintained by Facebook</li>
-      <li>Powers thousands of enterprise apps, including mobile apps</li>
-    </ul>
+    <header>
+      <nav>
+        <img src={logo} width="40px" />
+        <ul>
+            <li>Pricing</li>
+            <li>About</li>
+            <li>Content</li>
+        </ul>
+      </nav>
+  </header>
   )
 }
 
+function MainContent(){
+  return (
+    <div>
+      <h1>Reasons I'm excited to learn React</h1>
+        <ol>
+          <li>It's a popular library, so I'll be 
+              able to fit in with the cool kids!</li>
+          <li>I'm more likely to get a job as a developer
+              if I know React</li>
+        </ol>
+    </div>
+  )
+}
+
+function Footer() {
+  return (
+      <footer>
+          <small>© 2023 HK development. All rights reserved.</small>
+      </footer>
+  )
+}
 
 const data = (
   <div>
       <Header />
       <MainContent />
+      <Footer />
   </div>
 );
 
