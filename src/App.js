@@ -1,13 +1,19 @@
 import React from 'react';
-import './App.css';
-import data from './Static-Page'; // Import the data constant
+import './App.css'; 
+import MainContent from './MainContent';
+import Header  from './Header';
+import Footer from './Footer';
+ 
 
 function App() {
   return (
     <div className="App">
-      {data} {/* Render the data constant directly */}
+      <Header />
+      <MainContent />
+      <Footer />
     </div>
   );
 }
+
 
 export default App;
