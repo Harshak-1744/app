@@ -24,44 +24,46 @@ header {
   font-weight: bold;
   cursor: pointer;  
 }
-.main
-{
+
+.main {
   font-size: 55px;
 }
+
 .logo {
   cursor: pointer;
   margin-right: 20px; 
   width: 60px;
 }
 
-
 .nav-items li:hover {
   color: #007BFF; 
 }
 
 ol {
-  padding-left: 20px; 
-  counter-reset: my-awesome-counter; 
-  list-style-type: none; 
+  padding-left: 40px;
+  list-style-type: none;
+  counter-reset: item;
 }
 
 ol li {
-  position: relative;
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 15px;
-  padding-left: 2px;
-  text-align: left;
+  position: relative;
+  padding-left: 40px;
+  text-align: left; 
 }
 
-ol li:before {
-  counter-increment: my-awesome-counter;
-  content: counter(my-awesome-counter) ".";
-  left: 0;
-  padding-right: 30px;
+ol li::before {
+  content: counter(item) ".";
+  counter-increment: item;
+  position: absolute;
+  left: 0;  
+  top: 0;
   font-weight: bold;
-  color: #007BFF; 
+  color: #007BFF;
 }
+
 
 
 .footer {
@@ -72,5 +74,5 @@ ol li:before {
   margin-top: 30px;
   color: #FFFFFF;
   position: static;
-  margin-top: 272px;  
+  margin-top: 229px; 
 }
