@@ -4,6 +4,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -27,6 +32,11 @@ header {
 
 .main {
   font-size: 55px;
+  color: #000;  
+  animation: appearFromBelow 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.MainContent {
+  flex: 1 0 auto;
 }
 
 .logo {
@@ -64,15 +74,26 @@ ol li::before {
   color: #007BFF;
 }
 
-
-
 .footer {
   background-color: #2C3E50;
   padding: 20px;
   text-align: left;
   box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
-  margin-top: 30px;
   color: #FFFFFF;
-  position: static;
-  margin-top: 229px; 
+  position: relative;
+  margin-top: auto;
+}
+
+
+@keyframes appearFromBelow {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+    color: #ddd;  
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    color: #000;  
+  }
 }
